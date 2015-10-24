@@ -1,0 +1,35 @@
+.chart rect {
+  fill: steelblue;
+}
+.chart text {
+  /*font: 10px sans-serif;*/
+	color: #A1A1A1
+}
+table#popup-table{
+	display: table;
+	z-index: 10;
+    height: inherit;
+	margin-bottom: 0;
+}
+
+table#popup-table td{
+	padding: 5px 11px 5px 11px;
+	font-size: 11px;
+}
+
+div.popup-window{
+/*	width: 9em;*/
+	display: none;
+	position: fixed;
+	border: 1px solid;
+  	border-radius: 4px;
+/*    height: 6em;*/
+    overflow: hidden;
+}
+#pie-nav {
+	display: block;
+	margin-top: 2%;
+}
+.hover-effect{
+	cursor: pointer;
+}

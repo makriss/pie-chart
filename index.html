@@ -1,0 +1,72 @@
+<html !doctype>
+<html>
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="pie-chart.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="pie-container"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="pie-chart.js"></script>
+        <script>
+        var config = {
+                width: 450,
+                height: 350,
+                innerRadius: 90,
+                outerRadius: 150,
+                duration: 1000,
+                textOffset: 15,
+                valueProp: 'cost',
+                labelProp: 'category',
+                subProp: 'categories',
+                hoverProps: ['category', 'cost'],
+                slideTime: 250,
+                containerId: '#pie-container'
+        }
+
+        var data = [
+          {
+            "id":26,
+            "category":"Cheeses",
+            "cost":541.11,
+            "categories":[
+              {
+                "cost":230.00,
+                "category":"European",
+                "id":455
+              },
+              {
+                "id":33,
+                "category":"Australian",
+                "cost":113.90
+              }
+            ]
+          },
+          {
+            "id":70,
+            "category":"Breads",
+            "cost":540.99,
+            "categories":[
+              {
+                "id":71,
+                "category":"Whole wheat",
+                "cost":18.26,
+                "categories":[
+                  {
+                    "id":49,
+                    "category":"Graham bread",
+                    "cost":16.06
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+
+        var pie = new pieChart(config,data);
+
+        </script>
+    </body>
+</html>
